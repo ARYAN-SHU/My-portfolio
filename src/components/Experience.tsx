@@ -4,23 +4,23 @@ import { motion } from 'framer-motion'
 
 const experiences = [
   {
-    title: 'Senior Full-Stack Developer',
-    company: 'TechCorp Inc.',
-    period: '2022 - Present',
-    description: 'Led development of scalable web applications using React, Node.js, and AWS.',
+    title: ' Full-Stack Developer ',
+    company: 'Tata Consultancy Services',
+    period: '2024 - Present',
+    description: 'Led development of scalable web applications using React, Node.js, and AWS Services like EC2, lambda, and S3, S3, etc...',
   },
   {
     title: 'Full-Stack Developer',
-    company: 'StartupXYZ',
-    period: '2020 - 2022',
-    description: 'Built MVPs for various startups, focusing on rapid prototyping and user experience.',
+    company: 'Cognizant',
+    period: '2024-2024',
+    description: 'Worked on building and maintaining web applications with a focus on performance and user experience using React and Django.',
   },
-  {
-    title: 'Junior Developer',
-    company: 'WebAgency',
-    period: '2019 - 2020',
-    description: 'Developed responsive websites and maintained existing client projects.',
-  },
+  // {
+  //   title: 'Junior Developer',
+  //   company: 'WebAgency',
+  //   period: '2019 - 2020',
+  //   description: 'Developed responsive websites and maintained existing client projects.',
+  // },
 ]
 
 export default function Experience() {

@@ -13,7 +13,7 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-4"
         >
-          John Doe
+          Aryan Yadav
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 50 }}
@@ -21,7 +21,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-8"
         >
-          Full-Stack Developer & UI/UX Enthusiast
+          Full-Stack Developer / Backend Developer / AWS Enthusiast
         </motion.p>
         <motion.button
           initial={{ opacity: 0 }}
