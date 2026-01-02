@@ -2,11 +2,6 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
-import img from '../asset/resume_pic.jpg'
-
-// Note: Add your resume_pic.jpg image to src/asset/ directory and update this path
-// For now, using a placeholder image from Unsplash
-const profileImage = img
 export default function About() {
   return (
     <section id="about" className="py-20 bg-white dark:bg-gray-900">
@@ -27,7 +22,7 @@ export default function About() {
             className="md:w-1/2 mb-8 md:mb-0"
           >
             <Image
-              src={profileImage}
+              src='../asset/resume_Pic.jpg'
               alt="Aryan Yadav"
               width={256}
               height={256}
