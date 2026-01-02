@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Image from 'next/image'
+import img from '../asset/resume_pic.jpg'
 
 export default function About() {
   return (
@@ -23,8 +24,8 @@ export default function About() {
             className="md:w-1/2 mb-8 md:mb-0"
           >
             <Image
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=256&h=256&fit=crop&crop=face"
-              alt="John Doe"
+              src={img}
+              alt="Aryan Yadav"
               width={256}
               height={256}
               className="w-64 h-64 rounded-full mx-auto object-cover shadow-lg"
