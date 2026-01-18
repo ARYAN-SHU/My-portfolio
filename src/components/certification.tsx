@@ -6,6 +6,7 @@ const Certifications = () => {
 
   return (
     <section
+      id="certifications"
       style={{
         padding: "80px 20px",
         backgroundColor: "#0f172a",

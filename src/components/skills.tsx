@@ -3,7 +3,7 @@ const Skills = () => {
     <section
       id="skills"
       style={{
-        padding: "10px 5px",
+        padding: "1rem",
         backgroundColor: "#ffffff",
       }}
     >
@@ -35,7 +35,8 @@ const Skills = () => {
           <div
             style={{
               background: "#f8fafc",
-              padding: "20px 100px",
+              margin: "1rem 2.2rem",
+              padding: "1rem 2rem",
               borderRadius: "16px",
               boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
             }}
@@ -56,7 +57,7 @@ const Skills = () => {
                   <li
                     key={index}
                     style={{
-                      padding: "7px 0",
+                      padding: "7px 10px",
                       borderBottom: "1px solid #e2e8f0",
                       color: "#334155",
                       fontSize: "1rem",
@@ -73,7 +74,8 @@ const Skills = () => {
           <div
             style={{
               background: "#f8fafc",
-              padding: "20px 100px",
+              margin: "1rem 2.2rem",
+              padding: "1rem 2rem",
               borderRadius: "16px",
               boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
             }}
@@ -101,7 +103,7 @@ const Skills = () => {
                 <li
                   key={index}
                   style={{
-                    padding: "10px 0",
+                    padding: "10px",
                     borderBottom: "1px solid #e2e8f0",
                     color: "#334155",
                     fontSize: "1rem",
@@ -117,7 +119,8 @@ const Skills = () => {
           <div
             style={{
               background: "#f8fafc",
-              padding: "20px 100px",
+              margin: "1rem 2.2rem",
+              padding: "1rem 2rem",
               borderRadius: "16px",
               boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
             }}
@@ -138,7 +141,7 @@ const Skills = () => {
                   <li
                     key={index}
                     style={{
-                      padding: "10px 0",
+                      padding: "10px",
                       borderBottom: "1px solid #e2e8f0",
                       color: "#334155",
                       fontSize: "1rem",

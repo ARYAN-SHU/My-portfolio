@@ -3,7 +3,7 @@ const About = () => {
     <section
       id="about"
       style={{
-        padding: "7px 5px",
+        padding: "5px 4rem",
         background: "#ffffff",
       }}
     >
@@ -16,8 +16,8 @@ const About = () => {
         <h2
           style={{
             textAlign: "center",
-            fontSize: "2.5rem",
-            marginBottom: "10px",
+            fontSize: "2.7rem",
+            marginBottom: "7px",
             color: "#2c3e50",
           }}
         >
@@ -26,14 +26,16 @@ const About = () => {
 
         <div
           style={{
-            display: "grid",
-            gridTemplateColumns: "2fr 1fr",
-            gap: "40px",
+            display: "inline-flex",
+            gap: "70px",
             alignItems: "center",
+            justifyContent: "space-around",
           }}
         >
           {/* About Text */}
-          <div>
+          <div style={{
+            width: "31%"
+          }} >
             <p
               style={{
                 fontSize: "1.05rem",
@@ -62,7 +64,8 @@ const About = () => {
           {/* Stats */}
           <div
             style={{
-              display: "flex",
+              display: "grid",
+              width:"32%",
               gridTemplateColumns: "1fr",
               gap: "20px",
 
