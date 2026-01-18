@@ -1,8 +1,7 @@
 const Certifications = () => {
   const certifications = [
-    "Full Stack Web Development – Udemy",
-    "Python Programming – Coursera",
-    "Data Structures & Algorithms",
+    "Full Stack Web Development Udemy",
+    "AWS developer Associate"
   ];
 
   return (
@@ -36,7 +35,13 @@ const Certifications = () => {
                 fontSize: "1rem",
               }}
             >
-              {cert}
+              <div>
+                <span>{cert}</span>
+                <span>
+                  <img src="../assets/resume_Pic.jpg" alt="AWS" />
+                </span>
+
+              </div>
             </div>
           ))}
         </div>

@@ -1,13 +1,15 @@
+import resumePic from '../assets/resume_Pic.jpg';
+
 const Hero = () => {
   return (
     <section
       id="home"
       style={{
-        minHeight: "100vh",
+        minHeight: "80vh",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "60px 20px",
+        padding: "50px 15px",
         background: "linear-gradient(135deg, #0f172a, #1e293b)",
         color: "#ffffff",
       }}
@@ -27,7 +29,7 @@ const Hero = () => {
           <h1
             style={{
               fontSize: "3.2rem",
-              marginBottom: "15px",
+              marginBottom: "10px",
               lineHeight: "1.2",
             }}
           >
@@ -37,7 +39,7 @@ const Hero = () => {
           <p
             style={{
               fontSize: "1.2rem",
-              marginBottom: "16px",
+              marginBottom: "10px",
               color: "#cbd5f5",
               fontWeight: "500",
             }}
@@ -48,7 +50,7 @@ const Hero = () => {
           <p
             style={{
               fontSize: "1rem",
-              marginBottom: "30px",
+              marginBottom: "25px",
               color: "#e5e7eb",
               maxWidth: "520px",
               lineHeight: "1.6",
@@ -62,7 +64,7 @@ const Hero = () => {
             <a
               href="#projects"
               style={{
-                padding: "14px 28px",
+                padding: "10px 20px",
                 background: "#38bdf8",
                 color: "#0f172a",
                 borderRadius: "8px",
@@ -76,7 +78,7 @@ const Hero = () => {
             <a
               href="#contact"
               style={{
-                padding: "14px 28px",
+                padding: "10px 20px",
                 border: "2px solid #38bdf8",
                 color: "#38bdf8",
                 borderRadius: "8px",
@@ -98,20 +100,25 @@ const Hero = () => {
         >
           <div
             style={{
-              width: "260px",
-              height: "260px",
-              borderRadius: "50%",
-              padding: "6px",
-              background: "linear-gradient(135deg, #38bdf8, #6366f1)",
+              width: "70%",
+              height: "fit-content",
+              borderRadius: "1rem",
+              marginTop: "20px",
+              padding: "0.7rem",
+              justifyContent: "center",
+              alignItems: "center",
+              background: "linear-gradient(135deg, rgb(150 159 164), rgb(99, 102, 241))",
             }}
           >
             <img
-              src="../assets/resume_Pic.jpg"
+              src={resumePic}
               alt="Aryan Yadav"
               style={{
                 width: "100%",
-                height: "100%",
-                borderRadius: "50%",
+                height: "70%",
+                borderRadius: "20%",
+                justifyContent: "center",
+                alignItems: "center",
                 objectFit: "cover",
                 background: "#fff",
               }}

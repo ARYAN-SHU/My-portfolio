@@ -70,10 +70,13 @@ const Contact = () => {
             </p>
 
             <p style={{ marginBottom: "10px" }}>
-              <strong>Email:</strong> your.email@example.com
+              <strong>Email:</strong> yadava84569@gmail.com
+            </p>
+            <p style={{ marginBottom: "10px" }}>
+              <strong>Mobile No:</strong> +91 7398 869 968
             </p>
             <p>
-              <strong>Location:</strong> India
+              <strong>Location:</strong> Noida, India
             </p>
           </div>
 

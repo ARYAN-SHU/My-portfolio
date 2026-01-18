@@ -36,7 +36,7 @@ const OrganizationProjects = () => {
               marginBottom: "16px",
             }}
           >
-            XYZ Tech Solutions
+            Tata Counsultancy Services
           </p>
 
           <ul

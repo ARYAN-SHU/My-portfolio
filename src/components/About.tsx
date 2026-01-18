@@ -3,7 +3,7 @@ const About = () => {
     <section
       id="about"
       style={{
-        padding: "80px 20px",
+        padding: "7px 5px",
         background: "#ffffff",
       }}
     >
@@ -17,7 +17,7 @@ const About = () => {
           style={{
             textAlign: "center",
             fontSize: "2.5rem",
-            marginBottom: "50px",
+            marginBottom: "10px",
             color: "#2c3e50",
           }}
         >
@@ -37,7 +37,7 @@ const About = () => {
             <p
               style={{
                 fontSize: "1.05rem",
-                marginBottom: "18px",
+                marginBottom: "10px",
                 color: "#555",
                 lineHeight: "1.7",
               }}
@@ -62,9 +62,10 @@ const About = () => {
           {/* Stats */}
           <div
             style={{
-              display: "grid",
+              display: "flex",
               gridTemplateColumns: "1fr",
               gap: "20px",
+
             }}
           >
             {[
@@ -76,7 +77,7 @@ const About = () => {
                 key={index}
                 style={{
                   background: "#f8f9fa",
-                  padding: "24px",
+                  padding: "10px",
                   borderRadius: "12px",
                   textAlign: "center",
                   boxShadow: "0 6px 20px rgba(0,0,0,0.06)",
@@ -86,7 +87,7 @@ const About = () => {
                   style={{
                     fontSize: "2.2rem",
                     color: "#3498db",
-                    marginBottom: "8px",
+                    marginBottom: "4px",
                   }}
                 >
                   {stat.value}

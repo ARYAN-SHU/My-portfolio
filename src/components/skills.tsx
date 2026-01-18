@@ -3,7 +3,7 @@ const Skills = () => {
     <section
       id="skills"
       style={{
-        padding: "80px 20px",
+        padding: "10px 5px",
         backgroundColor: "#ffffff",
       }}
     >
@@ -17,7 +17,7 @@ const Skills = () => {
           style={{
             textAlign: "center",
             fontSize: "2.5rem",
-            marginBottom: "50px",
+            marginBottom: "20px",
             color: "#0f172a",
           }}
         >
@@ -35,14 +35,14 @@ const Skills = () => {
           <div
             style={{
               background: "#f8fafc",
-              padding: "30px",
+              padding: "20px 100px",
               borderRadius: "16px",
               boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
             }}
           >
             <h3
               style={{
-                marginBottom: "20px",
+                marginBottom: "10px",
                 color: "#38bdf8",
                 fontSize: "1.4rem",
               }}
@@ -51,12 +51,12 @@ const Skills = () => {
             </h3>
 
             <ul style={{ listStyle: "none", padding: 0 }}>
-              {["React", "TypeScript", "HTML / CSS", "JavaScript", "Vite"].map(
+              {["React", "Redux/Redux-Tool-Kit", "TypeScript", "HTML / CSS", "JavaScript"].map(
                 (skill, index) => (
                   <li
                     key={index}
                     style={{
-                      padding: "10px 0",
+                      padding: "7px 0",
                       borderBottom: "1px solid #e2e8f0",
                       color: "#334155",
                       fontSize: "1rem",
@@ -73,7 +73,7 @@ const Skills = () => {
           <div
             style={{
               background: "#f8fafc",
-              padding: "30px",
+              padding: "20px 100px",
               borderRadius: "16px",
               boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
             }}
@@ -91,10 +91,12 @@ const Skills = () => {
             <ul style={{ listStyle: "none", padding: 0 }}>
               {[
                 "Node.js",
-                "Express",
+                "Express.js",
                 "Python",
+                "FastAPI",
+                "Django",
                 "PostgreSQL",
-                "MongoDB",
+                "AWS RDS/DynamoDB",
               ].map((skill, index) => (
                 <li
                   key={index}
@@ -115,7 +117,7 @@ const Skills = () => {
           <div
             style={{
               background: "#f8fafc",
-              padding: "30px",
+              padding: "20px 100px",
               borderRadius: "16px",
               boxShadow: "0 10px 25px rgba(0,0,0,0.08)",
             }}
@@ -131,7 +133,7 @@ const Skills = () => {
             </h3>
 
             <ul style={{ listStyle: "none", padding: 0 }}>
-              {["Git", "Docker", "AWS", "VS Code", "Figma"].map(
+              {["Git", "Docker", "AWS", "Nginx", "Kubernetes"].map(
                 (skill, index) => (
                   <li
                     key={index}
