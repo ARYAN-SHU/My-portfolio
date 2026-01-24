@@ -9,31 +9,44 @@ const TEMPLATE_ID = "template_7015wkl";
 const PUBLIC_KEY = "98AlnFjNhXEd-_k9i";
 
 const Contact = () => {
-  const formRef = useRef();
+  // ✅ Properly typed ref
+  const formRef = useRef<HTMLFormElement | null>(null);
   const [loading, setLoading] = useState(false);
 
-  const sendEmail = (e) => {
+  // ✅ Properly typed submit event
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (loading) return;
+    if (loading || !formRef.current) return;
 
     setLoading(true);
 
     emailjs
-      .sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+      .sendForm(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        formRef.current,
+        PUBLIC_KEY
+      )
       .then(() => {
-        toast.success("Message sent successfully. I’ll get back to you soon.", {
-          position: "bottom-right",
-          autoClose: 4000,
-          theme: "light",
-        });
-        formRef.current.reset();
+        toast.success(
+          "Message sent successfully. I’ll get back to you soon.",
+          {
+            position: "bottom-right",
+            autoClose: 4000,
+            theme: "light",
+          }
+        );
+        formRef.current?.reset();
       })
       .catch(() => {
-        toast.error("Failed to send message. Please try again.", {
-          position: "bottom-right",
-          autoClose: 4000,
-          theme: "light",
-        });
+        toast.error(
+          "Failed to send message. Please try again.",
+          {
+            position: "bottom-right",
+            autoClose: 4000,
+            theme: "light",
+          }
+        );
       })
       .finally(() => setLoading(false));
   };
@@ -81,7 +94,12 @@ const Contact = () => {
             >
               <h3>Send a Message</h3>
 
-              <input name="name" type="text" placeholder="Your Name" required />
+              <input
+                name="name"
+                type="text"
+                placeholder="Your Name"
+                required
+              />
               <input
                 name="email"
                 type="email"
@@ -90,7 +108,7 @@ const Contact = () => {
               />
               <textarea
                 name="message"
-                rows="4"
+                rows={4}
                 placeholder="Your Message"
                 required
               />
@@ -132,14 +150,12 @@ const Contact = () => {
           color: #64748b;
         }
 
-        /* ===== GRID ===== */
         .contact-grid {
           display: grid;
           grid-template-columns: 1fr 1fr;
           gap: 32px;
         }
 
-        /* ===== CARD ===== */
         .contact-card {
           background: #ffffff;
           border-radius: 16px;
@@ -159,7 +175,6 @@ const Contact = () => {
           font-size: 0.95rem;
         }
 
-        /* ===== INFO ===== */
         .contact-kv {
           margin-bottom: 14px;
         }
@@ -175,7 +190,6 @@ const Contact = () => {
           font-weight: 600;
         }
 
-        /* ===== FORM ===== */
         .contact-form {
           display: flex;
           flex-direction: column;
@@ -193,11 +207,6 @@ const Contact = () => {
           font-size: 0.95rem;
         }
 
-        .contact-form input::placeholder,
-        .contact-form textarea::placeholder {
-          color: #94a3b8;
-        }
-
         .contact-form input:focus,
         .contact-form textarea:focus {
           border-color: #2563eb;
@@ -213,21 +222,13 @@ const Contact = () => {
           background: linear-gradient(135deg, #2563eb, #60a5fa);
           color: #ffffff;
           cursor: pointer;
-          transition: transform 0.15s ease, box-shadow 0.15s ease;
-        }
-
-        .contact-form button:hover {
-          transform: translateY(-1px);
-          box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
         }
 
         .contact-form button:disabled {
           opacity: 0.65;
           cursor: not-allowed;
-          box-shadow: none;
         }
 
-        /* ===== RESPONSIVE ===== */
         @media (max-width: 900px) {
           .contact-grid {
             grid-template-columns: 1fr;
