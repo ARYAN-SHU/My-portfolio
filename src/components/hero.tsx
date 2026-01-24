@@ -1,132 +1,178 @@
-import resumePic from '../assets/resume_Pic.jpg';
+import resumePic from "../assets/resume_Pic.jpg";
 
 const Hero = () => {
   return (
-    <section
-      id="home"
-      style={{
-        minHeight: "80vh",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "50px 15px",
-        background: "linear-gradient(135deg, #0f172a, #1e293b)",
-        color: "#ffffff",
-      }}
-    >
-      <div
-        style={{
-          maxWidth: "1200px",
-          width: "100%",
-          display: "grid",
-          gridTemplateColumns: "1.2fr 1fr",
-          gap: "50px",
-          alignItems: "center",
-        }}
-      >
-        {/* Left Content */}
-        <div>
-          <h1
-            style={{
-              fontSize: "3.2rem",
-              marginBottom: "10px",
-              lineHeight: "1.2",
-            }}
-          >
-            Hi, I’m <span style={{ color: "#38bdf8" }}>Aryan Yadav</span>
-          </h1>
+    <>
+      <section id="home" className="hero">
+        <div className="hero-container">
+          {/* LEFT */}
+          <div className="hero-content">
+            <h1>
+              Hi, I’m <span>Aryan Yadav</span>
+            </h1>
 
-          <p
-            style={{
-              fontSize: "1.2rem",
-              marginBottom: "10px",
-              color: "#cbd5f5",
-              fontWeight: "500",
-            }}
-          >
-            Full Stack Developer | Python Developer | Problem Solver
-          </p>
+            <h2>Full Stack Developer · Python Developer · Problem Solver</h2>
 
-          <p
-            style={{
-              fontSize: "1rem",
-              marginBottom: "25px",
-              color: "#e5e7eb",
-              maxWidth: "520px",
-              lineHeight: "1.6",
-            }}
-          >
-            I create amazing web experiences and solve complex problems with
-            clean, efficient code.
-          </p>
+            <p>
+              I build scalable web applications, design efficient backend
+              systems, and solve real-world problems with clean, maintainable
+              code.
+            </p>
 
-          <div style={{ display: "flex", gap: "16px" }}>
-            <a
-              href="#projects"
-              style={{
-                padding: "10px 20px",
-                background: "#38bdf8",
-                color: "#0f172a",
-                borderRadius: "8px",
-                fontWeight: "600",
-                textDecoration: "none",
-              }}
-            >
-              View My Work
-            </a>
+            <div className="hero-actions">
+              <a href="#projects" className="primary-btn">
+                View My Work
+              </a>
+              <a href="#contact" className="secondary-btn">
+                Get In Touch
+              </a>
+            </div>
+          </div>
 
-            <a
-              href="#contact"
-              style={{
-                padding: "10px 20px",
-                border: "2px solid #38bdf8",
-                color: "#38bdf8",
-                borderRadius: "8px",
-                fontWeight: "600",
-                textDecoration: "none",
-              }}
-            >
-              Get In Touch
-            </a>
+          {/* RIGHT */}
+          <div className="hero-image">
+            <div className="image-frame">
+              <img src={resumePic} alt="Aryan Yadav" />
+            </div>
           </div>
         </div>
+      </section>
 
-        {/* Right Image */}
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-          }}
-        >
-          <div
-            style={{
-              width: "70%",
-              height: "fit-content",
-              borderRadius: "1rem",
-              marginTop: "20px",
-              padding: "0.7rem",
-              justifyContent: "center",
-              alignItems: "center",
-              background: "linear-gradient(135deg, rgb(150 159 164), rgb(99, 102, 241))",
-            }}
-          >
-            <img
-              src={resumePic}
-              alt="Aryan Yadav"
-              style={{
-                width: "100%",
-                height: "70%",
-                borderRadius: "20%",
-                justifyContent: "center",
-                alignItems: "center",
-                objectFit: "cover",
-                background: "#fff",
-              }}
-            />
-          </div>
-        </div>
-      </div>
-    </section>
+      <style>{`
+        /* ===== HERO SECTION ===== */
+        .hero {
+          min-height: calc(100vh - 64px); /* header-safe */
+          padding: 80px 16px 40px;
+          background: linear-gradient(135deg, #0f172a, #1e293b);
+          color: #ffffff;
+          display: flex;
+          align-items: center;
+          overflow: hidden; /* 🔑 PREVENT BLEED */
+        }
+
+        .hero-container {
+          max-width: 1200px;
+          margin: 0 auto;
+          width: 100%;
+          display: grid;
+          grid-template-columns: 1.1fr 0.9fr;
+          align-items: center;
+          gap: clamp(24px, 5vw, 60px);
+        }
+
+        /* ===== LEFT CONTENT ===== */
+        .hero-content h1 {
+          font-size: clamp(2rem, 5vw, 3.2rem);
+          line-height: 1.15;
+          margin-bottom: 10px;
+        }
+
+        .hero-content h1 span {
+          color: #38bdf8;
+        }
+
+        .hero-content h2 {
+          font-size: clamp(0.9rem, 2.6vw, 1.25rem);
+          font-weight: 500;
+          color: #cbd5f5;
+          margin-bottom: 14px;
+        }
+
+        .hero-content p {
+          font-size: 1rem;
+          line-height: 1.6;
+          color: #e5e7eb;
+          max-width: 520px;
+          margin-bottom: 26px;
+        }
+
+        .hero-actions {
+          display: flex;
+          gap: 14px;
+          flex-wrap: wrap;
+        }
+
+        .primary-btn {
+          padding: 12px 22px;
+          background: #38bdf8;
+          color: #0f172a;
+          border-radius: 10px;
+          font-weight: 600;
+          text-decoration: none;
+        }
+
+        .secondary-btn {
+          padding: 12px 22px;
+          border: 2px solid #38bdf8;
+          color: #38bdf8;
+          border-radius: 10px;
+          font-weight: 600;
+          text-decoration: none;
+        }
+
+        /* ===== RIGHT IMAGE ===== */
+        .hero-image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .image-frame {
+          width: min(320px, 90%);
+          padding: 8px;
+          border-radius: 22px;
+          background: linear-gradient(135deg, #38bdf8, #6366f1);
+          animation: float 5s ease-in-out infinite;
+          max-height: 380px; /* 🔑 HARD LIMIT */
+        }
+
+        .image-frame img {
+          width: 100%;
+          height: 100%;
+          border-radius: 16px;
+          object-fit: cover;
+          background: #ffffff;
+        }
+
+        @keyframes float {
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-6px); } /* controlled motion */
+        }
+
+        /* ===== TABLET ===== */
+        @media (max-width: 900px) {
+          .hero-container {
+            grid-template-columns: 1fr;
+            text-align: center;
+          }
+
+          .hero-content p {
+            margin-left: auto;
+            margin-right: auto;
+          }
+
+          .hero-actions {
+            justify-content: center;
+          }
+
+          .image-frame {
+            max-height: 300px;
+          }
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 480px) {
+          .hero {
+            padding-top: 70px;
+          }
+
+          .image-frame {
+            width: 200px;
+            max-height: 240px;
+          }
+        }
+      `}</style>
+    </>
   );
 };
 
